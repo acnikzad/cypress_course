@@ -4,7 +4,7 @@
   "description": "This is going to be the project for Udemy about Cypress.io",
   "main": "index.js",
   "scripts": {
-    "runner": "cypress open --e2e --browser chrome"
+    "runner": "cypress open --e2e --browser chrome --config"
   },
   "keywords": [
     "cypress",

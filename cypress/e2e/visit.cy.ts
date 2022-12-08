@@ -1,5 +1,10 @@
 describe('basics', () => {
+    beforeEach(() =>{
+        cy.visit("/textinput");
+    });
     it('visit explanation', () => {
-      cy.visit('http://uitestingplayground.com/textinput');
+        cy.url().then((url)=>{
+            cy.log(`Printing the URL: ${url}`)
+        })
     });
   })
