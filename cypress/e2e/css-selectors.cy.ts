@@ -8,4 +8,7 @@ describe('Locators', () => {
     it('Cy.get + Cy.find example', () => {
         cy.get('div').find('button')
     });
+    it('Css selector using an attribute', () => {
+        cy.get(`button[class="btn btn-primary"]`).should('have.text', 'Button with Dynamic ID')
+    });
 });
