@@ -13,3 +13,19 @@ describe("Iframe example", () => {
       });
     });
   });
+
+  describe("Typing on an iFrame using the internet app", () => {
+    beforeEach(() => {
+      cy.visit(`${Cypress.env("theInternet")}/iframe`);
+    });
+    it("iFrame demo", () => {
+      cy.get("#mce_0_ifr").then(($iframe) => {
+        const $body = $iframe.contents().find("body");
+        cy.wrap($body).find('p').type('{selectAll}{del}Hello World');
+      });
+      cy.get("#mce_0_ifr").then(($iframe) => {
+        const $body = $iframe.contents().find("body");
+        cy.wrap($body).find('p').should('have.text', 'Hello World');
+      });
+    });
+  });
