@@ -5,8 +5,7 @@ describe("Demo QA", () => {
     it("Checkbox scenario", () => {
       cy.get('input[type="checkbox"]').click({ force: true });
       cy.get("#result").should(
-        "have.text",
-        "You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile"
+        "have.text"
       );
     });
   });
