@@ -18,6 +18,7 @@
   "author": "Aria Nikzad",
   "license": "ISC",
   "devDependencies": {
+    "@testing-library/cypress": "^9.0.0",
     "cy-verify-downloads": "^0.1.11",
     "cypress": "^12.0.1",
     "cypress-file-upload": "^5.0.8",
